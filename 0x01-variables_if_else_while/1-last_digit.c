@@ -7,25 +7,26 @@
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	int n;
-	int i;
+	int is;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	i = n % 10;
-	if (i > 5)
+	is = n % 10;
+	if (is > 5)
 	{
-		printf("and is greater than 5\n");
+		printf("the last digit of %d is greater than 5: the string and %d greater than 5\n", n, is);
 	}
-	else if (i == 0)
+	else if (is == 0)
 	{
-		printf("and is 0\n");
+		printf("the last digit of %d is 0: the string and %d 0\n", n, is);
 	}
 	else
 	{
-		printf("and is less than 6 and not 0\n");
+		printf("the last digit of %d is less than 6 and not 0: the string and %d less than 6 and not 0\n", n, is);
 	}
 	return (0);
 }
