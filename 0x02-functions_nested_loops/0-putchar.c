@@ -1,10 +1,9 @@
 #include "main.h"
 /**
- * main - 'print _putchar to stdout'
- * putchar is written by mbah
- * Return: Always 0 (Success)
- */
-
+* main - Print _putchar
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
 	_putchar('_');
