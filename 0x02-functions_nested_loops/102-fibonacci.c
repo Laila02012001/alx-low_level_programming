@@ -5,20 +5,26 @@
  */
 int main(void)
 {
+	unsigned long int a, b, abcd;
 	int count;
 
-	unsigned long fib1 = 0, fib2 = 1, sum;
-
-	for (count = 0; count < 50; count++)
+	count = 1;
+	a = 1;
+	b = 2;
+	printf("%lu, ", a);
+	while (count <= 50)
 	{
-		sum = fib1 + fib2;
-		printf("%lu", sum);
-		fib1 = fib2;
-		fib2 = sum;
-		if (count == 49)
-			printf("\n");
-		else
-			printf(",");
+		count++;
+		abcd = a + b;
+		a = b;
+		b = abcd;
+		if (count == 50)
+		{
+			printf("%lu", a);
+			break;
+		}
+		printf("%lu, ", a);
 	}
+	printf("\n");
 	return (0);
 }
