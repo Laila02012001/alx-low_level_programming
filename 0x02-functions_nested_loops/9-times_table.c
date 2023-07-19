@@ -19,11 +19,11 @@ void times_table(void)
 				_putchar(c / 10 + '0');
 				_putchar(c % 10 + '0');
 			}
-				else
-				{
-					_putchar(32);
-					_putchar(c + 48);
-				}
+			else
+			{
+				_putchar(32);
+				_putchar(c + 48);
+			}
 		_putchar('\n');
 		}
 	}
