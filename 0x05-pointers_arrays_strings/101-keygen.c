@@ -2,22 +2,22 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- *main - entry point generates a random password
- *Return: the generated password
+ *main - generate random valid passwords for the program 101-crackme
+ *Return: returnt 0
  */
 int main(void)
 {
-	char l;
-	int a;
+	char a;
+	int b;
 
 	srand(time(0));
 
-	while (a <= 2645)
+	while (b <= 2645)
 	{
-		l = rand() % 128;
-		a += l;
-		putchar(l);
+		a = rand() % 128;
+		b += a;
+		putchar(a);
 	}
-	putchar(2772 - a);
+	putchar(2772 - b);
 	return (0);
 }
