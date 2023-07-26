@@ -13,7 +13,7 @@ void reverse_array(int *a, int n)
 
 	for (l = 0; l < n; l++)
 	{
-		for (o = l + 1; l < n; l++)
+		for (o = l + 1; o < n; o++)
 		{
 			laila = *(a + l);
 			*(a + l) = *(a + o);
