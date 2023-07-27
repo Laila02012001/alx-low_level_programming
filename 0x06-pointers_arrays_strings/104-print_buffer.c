@@ -12,7 +12,7 @@ void print_buffer(char *b, int size)
 	int p[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
 	if (size <= 0)
-	       printf("\n");
+		printf("\n");
 	for (l = 0; *(b + l); l++)
 	{
 		for (o = 0; o < 8; o++)
