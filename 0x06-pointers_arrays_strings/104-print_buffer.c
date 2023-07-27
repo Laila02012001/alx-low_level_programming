@@ -8,34 +8,34 @@
  */
 void print_buffer(char *b, int size)
 {
-	int l, o, res = 0;
+	int i, j, res = 0;
 	int p[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
 	if (size <= 0)
 		printf("\n");
-	for (l = 0; *(b + l); l++)
+	for (i = 0; *(b + i); i++)
 	{
-		for (o = 0; o < 8; o++)
+		for (j = 0; j < 8; j++)
 		{
-			if (p[o] == 0)
-				printf("%x", p[o]);
+			if (p[j] == 0)
+				printf("%x", p[j]);
 			else
 			{
-				res = res * 10 + p[o];
+				res = res * 10 + p[j];
 			}
 		}
 		printf("%x", res);
-		for (o = l; o < l + 10; o++)
+		for (j = i; j < i + 10; j++)
 		{
-			if (o % 2 == 0)
+			if (j % 2 == 0)
 				printf(" ");
-			printf("%x", *(b + o));
+			printf("%x", *(b + j));
 		}
-		for (o = l; o < l + 10; o++)
+		for (j = i; j < i + 10; j++)
 		{
-			printf("%c", *(b + o));
+			printf("%c", *(b + j));
 		}
 		printf("\n");
-		l = l + 10;
+		i = i + 10;
 	}
 }
