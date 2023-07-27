@@ -1,46 +1,41 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_buffer - print a buffer
+ * print_buffer - Print number
  * @b: integer
  * @size: integer
- * Return: nothing
+ * Return: Nothing
  */
 void print_buffer(char *b, int size)
 {
+	int l, o, laila = 0;
+	int p[] = {0, 0, 0, 0, 0, 0, 0, 0};
+
 	if (size <= 0)
-	{
 		printf("\n");
-		return;
-	}
-
-	int i, j;
-
-	for (i = 0; i < size; i += 10)
+	for (l = 0; *(b + l); l++)
 	{
-		printf("%08x: ", i);
-
-		for (j = 0; j < 10; j++)
+		for (o = 0; o < 8; o++)
 		{
-			if (i + j < size)
-				printf("%02x", (unsigned char)b[i + j]);
+			if (p[o] == 0)
+				printf("%x", p[o]);
 			else
-				printf("  ");
-			if (j % 2 != 0)
+			{
+				laila = laila * 10 + p[o];
+			}
+		}
+		printf("%x", laila);
+		for (o = l; o < l + 10; o++)
+		{
+			if (o % 2 == 0)
 				printf(" ");
+			printf("%x", *(b + o));
 		}
-
-		printf(" ");
-		for (j = 0; j < 10 && i + j < size; j++)
+		for (o = l; o < l + 10; o++)
 		{
-			char c = b[i + j];
-
-			if (c >= ' ' && c <= '~')
-				putchar(c);
-			else
-				putchar('.');
+			printf("%c", *(b + o));
 		}
-
 		printf("\n");
+		l = l + 10;
 	}
 }
