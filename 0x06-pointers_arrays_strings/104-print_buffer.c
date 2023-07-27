@@ -8,7 +8,7 @@
  */
 void print_buffer(char *b, int size)
 {
-	int l, o, laila = 0;
+	int l, o, res = 0;
 	int p[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
 	if (size <= 0)
@@ -21,10 +21,10 @@ void print_buffer(char *b, int size)
 				printf("%x", p[o]);
 			else
 			{
-				laila = laila * 10 + p[o];
+				res = res * 10 + p[o];
 			}
 		}
-		printf("%x", laila);
+		printf("%x", res);
 		for (o = l; o < l + 10; o++)
 		{
 			if (o % 2 == 0)
