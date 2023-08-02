@@ -1,21 +1,21 @@
 #include "main.h"
 /**
  * sqrt2 - function for sqrt
- * @l: integer
- * @o: Integer
+ * @x: integer
+ * @n: Integer
  * Return: INteger
  */
-int sqrt2(int l, int o)
+int sqrt2(int x, int n)
 {
-	if (l * l == o)
-		return (o);
-	else if (l == o / 2)
+	if (x * x == n)
+		return (x);
+	else if (x == n / 2)
 		return (-1);
 	else
-		return (sqrt2((l + 1), o));
+		return (sqrt2((x + 1), n));
 }
 /**
- * _sqrt_recursion - Return the natural square root of a number
+ * _sqrt_recursion - Return the natural square root of a number.
  * @n: Integer
  * Return: Int
  */
