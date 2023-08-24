@@ -1,10 +1,9 @@
 #include "lists.h"
-
 /**
- * con - print before executing main
+ * before_main - Print message befare main
+ * Return: Nothings
  */
-
-void con(void)
+void before_main(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
