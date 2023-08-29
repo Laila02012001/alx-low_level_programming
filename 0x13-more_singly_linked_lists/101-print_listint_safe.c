@@ -7,15 +7,16 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t l = 0;
+	size_t laila = 0;
 
-	if (head)
+	if (!head)
 		exit(98);
-	while (head)
+
+	for (; head != NULL; laila++)
 	{
 		printf("[%p] %d\n", (void *)head, head->n);
-		l++;
 		head = head->next;
 	}
-	return (l);
+
+	return (laila);
 }
